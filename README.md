@@ -12,7 +12,7 @@
 
 - Primitivos, contienen un solo valor e incluyen los tipos como los **enteros, flotantes, caracteres, booleanos etc.**
 - Los tipos primitivos no son objetos, son valores
-- Las **variables** de tipo **referencia** NO almacenan valores, sino que nos permiten acceder a métodos y atributos de un objeto. (arrays, clases/instancias, interfaces)
+- Las **variables** de tipo **referencia** NO almacenan valores, sino que nos permiten acceder a métodos y atributos de un objeto. (arrays, clases/instancias, interfaces, String)
 
 ### Reglas para definir nombres de variables
 
@@ -23,3 +23,8 @@
 - Se debe utilizar camelCase
 - Pueden empezar por una letra, un subrayado o un símbolo de dolar
 - El contexto de una variable se delimita por las llaves
+### Ámbito y contexto de variables (Scope / Context)
+  - Las variables están delimitadas por los { ... } que es su contexto
+
+### Notas:
+- Las sentencias if (valor) evalúan boléanos true o false
