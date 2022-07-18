@@ -2,6 +2,7 @@
 ## Notas
 
 - Todo en Java es una clase, excepto los tipos primitivos, ya que representan valor. El JDK ejecuta todo lo que está dentro del método main
+- Las sentencias if (valor) evalúan boléanos true o false
 
 ### Variables
 - Java es de tipado alto. Cualquier **variable** que se defina tiene que estar **asociado a un tipo de dato.**
@@ -26,5 +27,3 @@
 ### Ámbito y contexto de variables (Scope / Context)
   - Las variables están delimitadas por los { ... } que es su contexto
 
-### Notas:
-- Las sentencias if (valor) evalúan boléanos true o false

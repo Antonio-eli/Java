@@ -26,7 +26,7 @@ public class HolaMundo {
         int numeroPrimitivo = 11;
         Integer numeroClase = 10;
         System.out.println(ANSI_PURPLE + "numeroPrimitivo = " + numeroPrimitivo);
-        System.out.println(ANSI_YELLOW + "numeroClase = " + numeroClase.hashCode());
+        System.out.println("numeroClase = " + numeroClase.hashCode());
 
 
         boolean valor = true;
@@ -35,7 +35,7 @@ public class HolaMundo {
             System.out.println("valor = " + valor);
             Integer numeroPrimitivo2 = 2022;
             numeroPrimitivo3 = 2023;
-            System.out.println(ANSI_PURPLE + "numeroPrimitivo2 = " + numeroPrimitivo2);
+            System.out.println("numeroPrimitivo2 = " + numeroPrimitivo2);
             System.out.println("numeroPrimitivo3 = " + numeroPrimitivo3);
 
         }
@@ -44,7 +44,19 @@ public class HolaMundo {
 
         //Nueva forma de crear variables
         var tipoFlexibleDeVariable = "10";
-        System.out.println(ANSI_GREEN + "tipoFlexibleDeVariable = " + tipoFlexibleDeVariable + ANSI_RESET);
+        System.out.println("tipoFlexibleDeVariable = " + tipoFlexibleDeVariable + ANSI_RESET);
+        /*Reglas de variables*/
+        String nombre;
+        String nivelProgramacion = "programador Jr";
+        var numero = 9;
+        nombre = "Eliceo" + " " + nivelProgramacion;
+        if (numero >= 10 ){
+            nivelProgramacion = "programador Senior";
+            nombre = "Eliceo" + " " + nivelProgramacion;
+            System.out.println(ANSI_YELLOW + "nombre = " + nombre);
+        } else {
+            System.out.println(ANSI_YELLOW + "nombre = " + nombre);
+        }
     }
 
 }
