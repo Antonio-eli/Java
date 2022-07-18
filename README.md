@@ -9,10 +9,12 @@
 - Las variables en Java tienen dos partes tipo de dato y el nombre de la variable
 - El tipo de la variable determina los valores que la variable puede contener y las operaciones que puedan realizar
 - En la versión 10 de java se implementa el tipado dinámico
-### Categorias de datos
+### Tipo de datos primitivos
 
 - Primitivos, contienen un solo valor e incluyen los tipos como los **enteros, flotantes, caracteres, booleanos etc.**
-- Los tipos primitivos no son objetos, son valores
+- Son ripos de datos escalares que contienen un solo valor. Los tipos primitivos no son objetos
+- Se escribe en minúsculas. Para especificar una literal boolean, se usan las palabras clave true o false escritas en minúscula ``` boolean apagado = true; ```
+### Tipo de datos de referencia
 - Las **variables** de tipo **referencia** NO almacenan valores, sino que nos permiten acceder a métodos y atributos de un objeto. (arrays, clases/instancias, interfaces, String)
 
 ### Reglas para definir nombres de variables
