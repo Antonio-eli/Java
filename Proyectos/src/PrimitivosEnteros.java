@@ -1,4 +1,4 @@
-public class primitivosEnteros {
+public class PrimitivosEnteros {
     public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_YELLOW = "\u001B[33m";
     public static final String ANSI_PURPLE = "\u001B[35m";
