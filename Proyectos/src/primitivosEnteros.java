@@ -1,4 +1,4 @@
-public class NumerosPrimitivos {
+public class primitivosEnteros {
     public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_YELLOW = "\u001B[33m";
     public static final String ANSI_PURPLE = "\u001B[35m";
@@ -32,8 +32,8 @@ public class NumerosPrimitivos {
         System.out.println("Valor maximo de un long: " + Long.MAX_VALUE);
         System.out.println("Valor mínimo de un long: " + Long.MIN_VALUE);
 
-        var numeroVarL = 9223372036854775807L;
-        var numeroVarF = 9223372036854775807F;
-        var numeroVarD = 9223372036854775807D;
+        //var numeroVarL = 9223372036854775807L;
+        //var numeroVarF = 9223372036854775807F;
+       // var numeroVarD = 9223372036854775807D;
     }
 }
