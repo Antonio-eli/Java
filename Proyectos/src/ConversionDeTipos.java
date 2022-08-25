@@ -11,5 +11,26 @@ public class ConversionDeTipos {
         String logicoStr = "true";
         boolean logicoBolean = Boolean.parseBoolean(logicoStr);
         System.out.println("logicoBolean = " + logicoBolean);
+
+        //Conversiones de tipo primitivos a cadenas de texto
+
+        int otroNumeroInt = 100;
+        String otroNumeroStr = Integer.toString(otroNumeroInt);
+        System.out.println("otroNumeroStr = " + otroNumeroStr);
+
+        /*valueOf recibe int, String puede tener un comportamiento raro dependiendo
+          De los parámetros que se pasen */
+        otroNumeroStr = String.valueOf(otroNumeroInt);
+        System.out.println("otroNumeroStr = " + otroNumeroStr);
+
+        double otroRealDouble = 1.23456e2;
+        String otroRealStr = Double.toString(otroRealDouble);
+        System.out.println("otroRealStr = " + otroRealStr);
+
+        otroRealStr = String.valueOf(1.23456f);
+        System.out.println("otroRealStr = " + otroRealStr);
+
+
+
     }
 }
