@@ -3,6 +3,7 @@ public class Automovil {
     String modelo;
     String color = "gris";
     double cilindrada;
+    int capacidadTanque = 40;
 
     public String detalle() {
         return  "auto.fabricante = " + this.fabricante + "\n" +
@@ -25,6 +26,14 @@ public class Automovil {
         String acelerar = this.acelerar(rpm);
         String frenar = this.frenar();
         return acelerar + "\n" + frenar;
+    }
+
+    public float calcularConusmo(int km, float porcentajeBencina){
+        return km / ( capacidadTanque * porcentajeBencina );
+    }
+    //Sobre carga de metodos
+    public float calcularConusmo(int km, int porcentajeBencina){
+        return km / ( capacidadTanque * (porcentajeBencina / 100f) );
     }
 
 }
