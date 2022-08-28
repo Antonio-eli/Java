@@ -5,13 +5,17 @@ public class Automovil {
     private double cilindrada;
     private  int capacidadTanque = 40;
 
+    public  Automovil(){}
+    public Automovil(String fabricante, String modelo){
+         this.fabricante = fabricante;
+         this.modelo = modelo;
+    }
+
     public String detalle() {
         return  "auto.fabricante = " + this.fabricante + "\n" +
                 "auto.modelo = " + this.modelo + "\n" +
                 "auto.color = " + this.color + "\n" +
                 "auto.cilindrada = " + this.cilindrada + "\n";
-
-
     }
 
     public String acelerar(int rpm){
