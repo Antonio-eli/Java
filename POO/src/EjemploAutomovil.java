@@ -1,5 +1,13 @@
+import java.util.Date;
+
 public class EjemploAutomovil {
+    //Color del texto
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_YELLOW = "\033[0;93m";
+    public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_RESET = "\u001B[0m";
     public static void main(String[] args) {
+        Date fecha = new Date();
         Automovil subaru = new Automovil("Subaru", "Impreza");
         subaru.setCilindrada(2.0);
         subaru.setColor("Blanco");
@@ -7,7 +15,13 @@ public class EjemploAutomovil {
         Automovil mazda = new Automovil("Mazda", "BT-50",  "Rojo", 3.0);
         System.out.println("mazda.getFabricante() = " + mazda.getFabricante());
 
-        Automovil nissan = new Automovil("Nissan", "Navara", "Gris oscuro", 3.5, 50);
+        Automovil nissan  = new Automovil("Nissan", "Navara", "Gris oscuro", 3.5, 50);
+        Automovil nissan2 = new Automovil("Nissan", "Navara", "Gris oscuro", 3.5, 50);
+        Automovil kia = new Automovil();
+        System.out.println(ANSI_GREEN + "Son iguales: " + ( nissan == nissan2 ) + ANSI_RESET);
+        System.out.println(ANSI_GREEN + "Son iguales con equals :: " + ( nissan.equals( nissan2 ) ) + ANSI_RESET);
+        System.out.println(ANSI_YELLOW + "Son iguales con equals :: " + ( kia.equals( nissan ) ) + ANSI_RESET);
+        System.out.println(ANSI_PURPLE + "Son iguales con equals :: " + ( kia.equals( fecha ) ) + ANSI_RESET);
 
         System.out.println(subaru.detalle());
         System.out.println(mazda.detalle());

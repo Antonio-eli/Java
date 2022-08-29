@@ -96,4 +96,17 @@ public class Automovil {
     public void setCapacidadTanque(int capacidadTanque) {
         this.capacidadTanque = capacidadTanque;
     }
+
+    //Sobre escritura del metodo equals
+
+    @Override
+    public boolean equals(Object obj) {
+        if ( !(obj instanceof Automovil)){
+            return false;
+        }
+        Automovil auto = (Automovil) obj;
+        return (this.fabricante != null && this.modelo != null
+                && this.fabricante.equals(auto.getFabricante())
+                && this.modelo.equals(auto.getModelo()));
+    }
 }
