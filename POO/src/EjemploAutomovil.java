@@ -31,9 +31,9 @@ public class EjemploAutomovil {
         System.out.println(subaru.acelerar(3000));
         System.out.println(subaru.frenar());
         System.out.println(mazda.acelerarFrenar(4000));
-        System.out.println("Kilometros por litro subaru " + subaru.calcularConusmo(300, 0.6f));
+        System.out.println("Kilometros por litro subaru " + subaru.calcularConsumo(300, 0.6f));
         //Implementacion con sobre carga de metodos
-        System.out.println("Kilometros por litro de subaru " + subaru.calcularConusmo(300, 60));
-        System.out.println("Kilometros por litro de nissan " + nissan.calcularConusmo(300, 60));
+        System.out.println("Kilometros por litro de subaru " + subaru.calcularConsumo(300, 60));
+        System.out.println("Kilometros por litro de nissan " + nissan.calcularConsumo(300, 60));
     }
 }
