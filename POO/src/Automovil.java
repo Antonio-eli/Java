@@ -109,4 +109,15 @@ public class Automovil {
                 && this.fabricante.equals(auto.getFabricante())
                 && this.modelo.equals(auto.getModelo()));
     }
+
+    @Override
+    public String toString() {
+        return "Automovil{" +
+                "fabricante='" + fabricante + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", color='" + color + '\'' +
+                ", cilindrada=" + cilindrada +
+                ", capacidadTanque=" + capacidadTanque +
+                '}';
+    }
 }

@@ -18,10 +18,12 @@ public class EjemploAutomovil {
         Automovil nissan  = new Automovil("Nissan", "Navara", "Gris oscuro", 3.5, 50);
         Automovil nissan2 = new Automovil("Nissan", "Navara", "Gris oscuro", 3.5, 50);
         Automovil kia = new Automovil();
-        System.out.println(ANSI_GREEN + "Son iguales: " + ( nissan == nissan2 ) + ANSI_RESET);
-        System.out.println(ANSI_GREEN + "Son iguales con equals :: " + ( nissan.equals( nissan2 ) ) + ANSI_RESET);
-        System.out.println(ANSI_YELLOW + "Son iguales con equals :: " + ( kia.equals( nissan ) ) + ANSI_RESET);
-        System.out.println(ANSI_PURPLE + "Son iguales con equals :: " + ( kia.equals( fecha ) ) + ANSI_RESET);
+        System.out.println("Son iguales: " + ( nissan == nissan2 ) );
+        System.out.println(ANSI_GREEN + "Son iguales con equals :: " + ( nissan.equals( nissan2 ) ) );
+        System.out.println("Son iguales con equals :: " + ( kia.equals( nissan ) ) );
+        System.out.println("Son iguales con equals :: " + ( kia.equals( fecha ) ) + ANSI_RESET);
+        System.out.println(ANSI_YELLOW + nissan );
+        System.out.println(nissan.toString() + ANSI_RESET);
 
         System.out.println(subaru.detalle());
         System.out.println(mazda.detalle());
