@@ -6,29 +6,40 @@ public class EjemploAutomovilStatic {
     public static final String ANSI_RESET = "\u001B[0m";
     public static void main(String[] args) {
         Automovil.setCapacidadTanqueEstatico(45);
+
         Automovil subaru = new Automovil("Subaru", "Impreza");
         subaru.setCilindrada(2.0);
         subaru.setColor(Color.BLANCO);
+        subaru.setTipo(TipoAutomovil.HATCHBACK);
 
         Automovil mazda = new Automovil("Mazda", "BT-50",  Color.ROJO, 3.0);
+        mazda.setTipo(TipoAutomovil.PICKUP);
         System.out.println("mazda.getFabricante() = " + mazda.getFabricante());
 
         Automovil nissan  = new Automovil("Nissan", "Navara", Color.GRIS, 3.5, 50);
+        nissan.setTipo(TipoAutomovil.PICKUP);
         Automovil.setColorPatente(Color.AZUL);
 
-        Automovil nissan2 = new Automovil("Nissan", "Navara", Color.GRIS, 3.5, 50);
+        Automovil nissan2 = new Automovil("Nissan", "Nissan 370Z", Color.GRIS, 3.5, 50);
         nissan2.setColor(Color.AMARILO);
+        nissan2.setTipo(TipoAutomovil.CONVERTIBLE);
         Automovil kia = new Automovil();
 
         System.out.println(subaru.detalle());
-        System.out.println( mazda.detalle());
+        System.out.println(mazda.detalle());
         System.out.println(nissan.detalle());
+        System.out.println(nissan2.detalle());
         System.out.println("Automovil.getColorPatente(): " + Automovil.getColorPatente().getColor());
 
         //Clase static Atributos y metodos estaticos
         Automovil.setCapacidadTanqueEstatico(45);
-        System.out.println(ANSI_YELLOW + "Automovil.calcularConusmoEstatico() = " + Automovil.calcularConusmoEstatico(300, 60) + ANSI_RESET);
+        System.out.println( "Automovil.calcularConusmoEstatico() = " + Automovil.calcularConusmoEstatico(300, 60));
         System.out.println("Velocidad maxima carretera " + Automovil.VELOCIDAD_MAX_CARRETERA);
         System.out.println("Velocidad maxima ciudad " + Automovil.VELOCIDAD_MAX_CIUDAD);
+
+        //Implemetando enumerador con mas atributos
+       TipoAutomovil tipoSubaru = subaru.getTipo();
+        System.out.println(ANSI_YELLOW + "tipoSubaru.getNombre() = " + tipoSubaru.getNombre());
+        System.out.println("tipoSubaru.getDescripcion() = " + tipoSubaru.getDescripcion() + ANSI_RESET);
     }
 }

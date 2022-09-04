@@ -6,6 +6,8 @@ public class Automovil {
     private double cilindrada;
     private  int capacidadTanque = 40;
 
+    private TipoAutomovil tipo;
+
     private static Color colorPatente = Color.NARANJA;
     private static int capacidadTanqueEstatico = 30;
     private static int ultimoId;
@@ -47,6 +49,7 @@ public class Automovil {
         return  "auto.id = " + this.id + "\n" +
                 "auto.fabricante = " + this.fabricante + "\n" +
                 "auto.modelo = " + this.modelo + "\n" +
+                "auto.tipo = " + this.getTipo().getDescripcion() + "\n" +
                 "auto.color = " + this.color.getColor() + "\n" +
                 "auto.colorPatente = " + colorPatente.getColor() + "\n" +
                 "auto.cilindrada = " + this.cilindrada + "\n";
@@ -143,8 +146,16 @@ public class Automovil {
     public void setId(int id) {
         this.id = id;
     }
-    //Sobre escritura del metodo equals
 
+    public TipoAutomovil getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(TipoAutomovil tipo) {
+        this.tipo = tipo;
+    }
+
+    //Sobre escritura del metodo equals
     @Override
     public boolean equals(Object obj) {
         if ( !(obj instanceof Automovil)){
