@@ -8,22 +8,22 @@ public class EjemploAutomovilStatic {
         Automovil.setCapacidadTanqueEstatico(45);
         Automovil subaru = new Automovil("Subaru", "Impreza");
         subaru.setCilindrada(2.0);
-        subaru.setColor(Automovil.COLOR_BLANCO);
+        subaru.setColor(Color.BLANCO);
 
-        Automovil mazda = new Automovil("Mazda", "BT-50",  Automovil.COLOR_ROJO, 3.0);
+        Automovil mazda = new Automovil("Mazda", "BT-50",  Color.ROJO, 3.0);
         System.out.println("mazda.getFabricante() = " + mazda.getFabricante());
 
-        Automovil nissan  = new Automovil("Nissan", "Navara", Automovil.COLOR_GRIS_OSCURO, 3.5, 50);
-        Automovil.setColorPatente(Automovil.COLOR_AZUL);
+        Automovil nissan  = new Automovil("Nissan", "Navara", Color.GRIS, 3.5, 50);
+        Automovil.setColorPatente(Color.AZUL);
 
-        Automovil nissan2 = new Automovil("Nissan", "Navara", Automovil.COLOR_GRIS_OSCURO, 3.5, 50);
-        nissan2.setColor(Automovil.COLOR_AMARILLO);
+        Automovil nissan2 = new Automovil("Nissan", "Navara", Color.GRIS, 3.5, 50);
+        nissan2.setColor(Color.AMARILO);
         Automovil kia = new Automovil();
 
         System.out.println(subaru.detalle());
         System.out.println( mazda.detalle());
         System.out.println(nissan.detalle());
-        System.out.println("Automovil.getColorPatente(): " + Automovil.getColorPatente());
+        System.out.println("Automovil.getColorPatente(): " + Automovil.getColorPatente().getColor());
 
         //Clase static Atributos y metodos estaticos
         Automovil.setCapacidadTanqueEstatico(45);

@@ -2,11 +2,11 @@ public class Automovil {
     private int id;
     private String fabricante;
     private String modelo;
-    private String color = COLOR_GRIS_OSCURO;
+    private Color color = Color.GRIS;
     private double cilindrada;
     private  int capacidadTanque = 40;
 
-    private static String colorPatente = "Naranaja";
+    private static Color colorPatente = Color.NARANJA;
     private static int capacidadTanqueEstatico = 30;
     private static int ultimoId;
 
@@ -28,17 +28,17 @@ public class Automovil {
          this.modelo = modelo;
     }
 
-    public Automovil(String fabricante, String modelo, String color) {
+    public Automovil(String fabricante, String modelo, Color color) {
         this(fabricante, modelo);
         this.color = color;
     }
 
-    public Automovil(String fabricante, String modelo, String color, double cilindrada) {
+    public Automovil(String fabricante, String modelo, Color color, double cilindrada) {
         this(fabricante, modelo, color);
         this.cilindrada = cilindrada;
     }
 
-    public Automovil(String fabricante, String modelo, String color, double cilindrada, int capacidadTanque) {
+    public Automovil(String fabricante, String modelo, Color color, double cilindrada, int capacidadTanque) {
         this(fabricante, modelo, color, cilindrada);
         this.capacidadTanque = capacidadTanque;
     }
@@ -47,8 +47,8 @@ public class Automovil {
         return  "auto.id = " + this.id + "\n" +
                 "auto.fabricante = " + this.fabricante + "\n" +
                 "auto.modelo = " + this.modelo + "\n" +
-                "auto.color = " + this.color + "\n" +
-                "auto.colorPatente = " + colorPatente + "\n" +
+                "auto.color = " + this.color.getColor() + "\n" +
+                "auto.colorPatente = " + colorPatente.getColor() + "\n" +
                 "auto.cilindrada = " + this.cilindrada + "\n";
     }
 
@@ -96,11 +96,11 @@ public class Automovil {
         this.modelo = modelo;
     }
 
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(Color color) {
         this.color = color;
     }
 
@@ -120,11 +120,11 @@ public class Automovil {
         this.capacidadTanque = capacidadTanque;
     }
 
-    public static String getColorPatente() {
+    public static Color getColorPatente() {
         return colorPatente;
     }
 
-    public static void setColorPatente(String colorPatente) {
+    public static void setColorPatente(Color colorPatente) {
         Automovil.colorPatente = colorPatente;
     }
 

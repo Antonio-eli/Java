@@ -10,13 +10,13 @@ public class EjemploAutomovil {
         Date fecha = new Date();
         Automovil subaru = new Automovil("Subaru", "Impreza");
         subaru.setCilindrada(2.0);
-        subaru.setColor("Blanco");
+        subaru.setColor(Color.BLANCO);
 
-        Automovil mazda = new Automovil("Mazda", "BT-50",  "Rojo", 3.0);
+        Automovil mazda = new Automovil("Mazda", "BT-50",  Color.ROJO, 3.0);
         System.out.println("mazda.getFabricante() = " + mazda.getFabricante());
 
-        Automovil nissan  = new Automovil("Nissan", "Navara", "Gris oscuro", 3.5, 50);
-        Automovil nissan2 = new Automovil("Nissan", "Navara", "Gris oscuro", 3.5, 50);
+        Automovil nissan  = new Automovil("Nissan", "Navara", Color.GRIS, 3.5, 50);
+        Automovil nissan2 = new Automovil("Nissan", "Navara", Color.GRIS, 3.5, 50);
         Automovil kia = new Automovil();
         System.out.println("Son iguales: " + ( nissan == nissan2 ) );
         System.out.println(ANSI_GREEN + "Son iguales con equals :: " + ( nissan.equals( nissan2 ) ) );
