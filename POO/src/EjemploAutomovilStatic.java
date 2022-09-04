@@ -5,26 +5,30 @@ public class EjemploAutomovilStatic {
     public static final String ANSI_PURPLE = "\u001B[35m";
     public static final String ANSI_RESET = "\u001B[0m";
     public static void main(String[] args) {
+        Automovil.setCapacidadTanqueEstatico(45);
         Automovil subaru = new Automovil("Subaru", "Impreza");
         subaru.setCilindrada(2.0);
-        subaru.setColor("Blanco");
+        subaru.setColor(Automovil.COLOR_BLANCO);
 
-        Automovil mazda = new Automovil("Mazda", "BT-50",  "Rojo", 3.0);
+        Automovil mazda = new Automovil("Mazda", "BT-50",  Automovil.COLOR_ROJO, 3.0);
         System.out.println("mazda.getFabricante() = " + mazda.getFabricante());
 
-        Automovil nissan  = new Automovil("Nissan", "Navara", "Gris oscuro", 3.5, 50);
-        Automovil.setColorPatente("Azul");
-        Automovil nissan2 = new Automovil("Nissan", "Navara", "Gris oscuro", 3.5, 50);
-        Automovil kia = new Automovil();
+        Automovil nissan  = new Automovil("Nissan", "Navara", Automovil.COLOR_GRIS_OSCURO, 3.5, 50);
+        Automovil.setColorPatente(Automovil.COLOR_AZUL);
 
+        Automovil nissan2 = new Automovil("Nissan", "Navara", Automovil.COLOR_GRIS_OSCURO, 3.5, 50);
+        nissan2.setColor(Automovil.COLOR_AMARILLO);
+        Automovil kia = new Automovil();
 
         System.out.println(subaru.detalle());
         System.out.println( mazda.detalle());
         System.out.println(nissan.detalle());
         System.out.println("Automovil.getColorPatente(): " + Automovil.getColorPatente());
-        //Clase static
+
+        //Clase static Atributos y metodos estaticos
         Automovil.setCapacidadTanqueEstatico(45);
         System.out.println(ANSI_YELLOW + "Automovil.calcularConusmoEstatico() = " + Automovil.calcularConusmoEstatico(300, 60) + ANSI_RESET);
-
+        System.out.println("Velocidad maxima carretera " + Automovil.VELOCIDAD_MAX_CARRETERA);
+        System.out.println("Velocidad maxima ciudad " + Automovil.VELOCIDAD_MAX_CIUDAD);
     }
 }
