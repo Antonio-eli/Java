@@ -39,5 +39,16 @@ public class EjemploAutomovilEnum {
             case STATION_WAGON ->
                 System.out.println("Es un tipo automóvil empleado para el transporte familiar");
         }
+
+        //Iterando enum con foreach
+        TipoAutomovil[] tipos = TipoAutomovil.values();
+        for (TipoAutomovil ta: tipos){
+            System.out.println(ta + " => " +
+                    ta.name() + ", " +
+                    ta.getNombre() + ", " +
+                    ta.getDescripcion() + ", " +
+                    ta.getNumeroPuertas());
+            System.out.println();
+        }
     }
 }
