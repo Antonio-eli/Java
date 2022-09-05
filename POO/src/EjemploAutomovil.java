@@ -8,18 +8,26 @@ public class EjemploAutomovil {
     public static final String ANSI_RESET = "\u001B[0m";
     public static void main(String[] args) {
         Date fecha = new Date();
+
+        Motor motorSubaru = new Motor(2.0, TipoMotor.GASOLINA);
         Automovil subaru = new Automovil("Subaru", "Impreza");
-        subaru.setCilindrada(2.0);
+        subaru.setMotor(motorSubaru);
+        subaru.setTanque(new Tanque());
         subaru.setColor(Color.BLANCO);
 
-        Automovil mazda = new Automovil("Mazda", "BT-50",  Color.ROJO, 3.0);
+        Motor motorMazda = new Motor(3.0, TipoMotor.GASOLINA);
+        Automovil mazda = new Automovil("Mazda", "BT-50",  Color.ROJO, motorMazda);
+        mazda.setTanque(new Tanque());
         System.out.println("mazda.getFabricante() = " + mazda.getFabricante());
 
-        Automovil nissan  = new Automovil("Nissan", "Navara", Color.GRIS, 3.5, 50);
-        Automovil nissan2 = new Automovil("Nissan", "Navara", Color.GRIS, 3.5, 50);
-        Automovil kia = new Automovil();
-        System.out.println("Son iguales: " + ( nissan == nissan2 ) );
-        System.out.println(ANSI_GREEN + "Son iguales con equals :: " + ( nissan.equals( nissan2 ) ) );
+        Motor motorNissan = new Motor(3.5,TipoMotor.DIESEL);
+        Automovil nissan  = new Automovil("Nissan", "Navara", Color.GRIS, motorNissan, new Tanque());
+
+        Motor motorRio = new Motor(3.5, TipoMotor.GASOLINA);
+        Automovil kia = new Automovil("kia", "Rio", Color.GRIS, motorRio, new Tanque(50));
+
+        System.out.println("Son iguales: " + ( nissan == kia ) );
+        System.out.println(ANSI_GREEN + "Son iguales con equals :: " + ( nissan.equals( kia ) ) );
         System.out.println("Son iguales con equals :: " + ( kia.equals( nissan ) ) );
         System.out.println("Son iguales con equals :: " + ( kia.equals( fecha ) ) + ANSI_RESET);
         System.out.println(ANSI_YELLOW + nissan );

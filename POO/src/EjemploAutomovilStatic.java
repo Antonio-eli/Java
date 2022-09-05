@@ -7,33 +7,42 @@ public class EjemploAutomovilStatic {
     public static void main(String[] args) {
         Automovil.setCapacidadTanqueEstatico(45);
 
+        Motor motorSubaru = new Motor(2.0, TipoMotor.GASOLINA);
         Automovil subaru = new Automovil("Subaru", "Impreza");
-        subaru.setCilindrada(2.0);
+        subaru.setMotor(motorSubaru);
+        subaru.setTanque(new Tanque());
         subaru.setColor(Color.BLANCO);
         subaru.setTipo(TipoAutomovil.HATCHBACK);
 
-        Automovil mazda = new Automovil("Mazda", "BT-50",  Color.ROJO, 3.0);
+        Motor motorMazda = new Motor(3.0, TipoMotor.GASOLINA);
+        Automovil mazda = new Automovil("Mazda", "BT-50",  Color.ROJO, motorMazda);
+        //mazda.setTanque(new Tanque());
         mazda.setTipo(TipoAutomovil.PICKUP);
         System.out.println("mazda.getFabricante() = " + mazda.getFabricante());
 
-        Automovil nissan  = new Automovil("Nissan", "Navara", Color.GRIS, 3.5, 50);
+        Motor motorNissan = new Motor(3.5,TipoMotor.DIESEL);
+        Automovil nissan  = new Automovil("Nissan", "Navara", Color.GRIS, motorNissan, new Tanque());
+        nissan.setTanque(new Tanque());
         nissan.setTipo(TipoAutomovil.PICKUP);
         Automovil.setColorPatente(Color.AZUL);
 
-        Automovil nissan2 = new Automovil("Nissan", "Nissan 370Z", Color.GRIS, 3.5, 50);
-        nissan2.setColor(Color.AMARILO);
-        nissan2.setTipo(TipoAutomovil.CONVERTIBLE);
-        Automovil kia = new Automovil();
+        Motor motorRio = new Motor(3.5, TipoMotor.GASOLINA);
+        Automovil kia = new Automovil("kia", "Rio", Color.GRIS, motorRio, new Tanque(50));
+        kia.setTanque(new Tanque());
+        kia.setColor(Color.AMARILO);
+        kia.setTipo(TipoAutomovil.CONVERTIBLE);
+
 
         System.out.println(subaru.detalle());
         System.out.println(mazda.detalle());
         System.out.println(nissan.detalle());
-        System.out.println(nissan2.detalle());
+        System.out.println(kia.detalle());
         System.out.println("Automovil.getColorPatente(): " + Automovil.getColorPatente().getColor());
 
         //Clase static Atributos y metodos estaticos
         Automovil.setCapacidadTanqueEstatico(45);
         System.out.println( "Automovil.calcularConusmoEstatico() = " + Automovil.calcularConusmoEstatico(300, 60));
+        System.out.println( "mazda.calcularConusmoEstatico() = " + mazda.calcularConsumo(300, 60));
         System.out.println("Velocidad maxima carretera " + Automovil.VELOCIDAD_MAX_CARRETERA);
         System.out.println("Velocidad maxima ciudad " + Automovil.VELOCIDAD_MAX_CIUDAD);
 
