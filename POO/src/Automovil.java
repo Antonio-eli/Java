@@ -7,6 +7,7 @@ public class Automovil {
     private Tanque tanque;
     private Persona conductor;
     private Rueda[] ruedas;
+    private int indiceRuedas;
 
     private TipoAutomovil tipo;
 
@@ -25,6 +26,7 @@ public class Automovil {
 
     public  Automovil(){
         this.id = ++ultimoId;
+        this.ruedas = new Rueda[5];
     }
     public Automovil(String fabricante, String modelo){
          this();
@@ -197,6 +199,13 @@ public class Automovil {
 
     public void setRuedas(Rueda[] ruedas) {
         this.ruedas = ruedas;
+    }
+
+    public Automovil addRueda(Rueda rueda) {
+        if (indiceRuedas < this.ruedas.length){
+            this.ruedas[indiceRuedas++] = rueda;
+        }
+        return this;
     }
 
     //Sobre escritura del metodo equals

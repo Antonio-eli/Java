@@ -6,12 +6,6 @@ public class EjemploAutomovilRelacionesObjetos {
     public static final String ANSI_RESET = "\u001B[0m";
     public static void main(String[] args) {
 
-        Rueda[] ruedasSubaru = new Rueda[5];
-        ruedasSubaru[0] = new Rueda("Michelin", 16,7.5);
-        ruedasSubaru[1] = new Rueda("Michelin", 16,7.5);
-        ruedasSubaru[2] = new Rueda("Michelin", 16,7.5);
-        ruedasSubaru[3] = new Rueda("Michelin", 16,7.5);
-        ruedasSubaru[4] = new Rueda("Michelin", 16,7.5);
         Persona conductorSubaru = new Persona("Eliceo", "Romero");
         Motor motorSubaru = new Motor(2.0, TipoMotor.GASOLINA);
         Automovil subaru = new Automovil("Subaru", "Impreza");
@@ -20,46 +14,43 @@ public class EjemploAutomovilRelacionesObjetos {
         subaru.setColor(Color.BLANCO);
         subaru.setTipo(TipoAutomovil.HATCHBACK);
         subaru.setConductor(conductorSubaru);
-        subaru.setRuedas(ruedasSubaru);
+        //subaru.setRuedas(ruedasSubaru);
+        Rueda[] ruedasSubaru = new Rueda[5];
+        for(int i = 0; i < ruedasSubaru.length; i++){
+            subaru.addRueda(new Rueda("Michelin", 16,7.5));
+        }
 
-        Rueda[] RuedasMazda = {
-            new Rueda("Firestone", 18, 10.5),
-            new Rueda("Firestone", 18, 10.5),
-            new Rueda("Firestone", 18, 10.5),
-            new Rueda("Firestone", 18, 10.5)
-        };
         Persona conductorMazda = new Persona("Elias", "Romero");
         Motor motorMazda = new Motor(3.0, TipoMotor.GASOLINA);
-        Automovil mazda = new Automovil("Mazda", "BT-50",  Color.ROJO, motorMazda);
-        //mazda.setTanque(new Tanque());
+        Automovil mazda = new Automovil("Mazda", "BT-50",  Color.ROJO, motorMazda, new Tanque());
         mazda.setTipo(TipoAutomovil.PICKUP);
         mazda.setConductor(conductorMazda);
-        mazda.setRuedas(RuedasMazda);
-        System.out.println("mazda.getFabricante() = " + mazda.getFabricante());
+        Rueda[] RuedasMazda = new Rueda[5];
+        for(int i = 0; i < RuedasMazda.length; i++){
+            mazda.addRueda(new Rueda("Michelin", 16,7.5));
+        }
 
-        Rueda[] RuedasNissan = {
-                new Rueda("Dunlop ", 20, 11.5),
-                new Rueda("Dunlop ", 20, 11.5),
-                new Rueda("Dunlop ", 20, 11.5),
-                new Rueda("Dunlop ", 20, 11.5)
-        };
         Persona conductorNissan = new Persona("Raul", "Romero");
         Motor motorNissan = new Motor(3.5,TipoMotor.DIESEL);
-        Automovil nissan  = new Automovil("Nissan", "Navara", Color.GRIS, motorNissan, new Tanque(), conductorNissan, RuedasNissan);
+        Automovil nissan  = new Automovil("Nissan", "Navara", Color.GRIS, motorNissan, new Tanque());
         nissan.setTipo(TipoAutomovil.PICKUP);
+        nissan.setConductor(conductorNissan);
+        nissan.addRueda(new Rueda("Michelin", 16,7.5))
+                .addRueda(new Rueda("Michelin", 16,7.5))
+                .addRueda(new Rueda("Michelin", 16,7.5))
+                .addRueda(new Rueda("Michelin", 16,7.5))
+                .addRueda(new Rueda("Michelin", 16,7.5));
 
 
-
-        Rueda[] RuedasRio = {
-                new Rueda("Pirelli", 18, 10.5),
-                new Rueda("Pirelli", 18, 10.5),
-                new Rueda("Pirelli", 18, 10.5),
-                new Rueda("Pirelli", 18, 10.5)
-        };
         Persona conductorRio = new Persona("Eva", "Romero");
         Motor motorRio = new Motor(3.5, TipoMotor.GASOLINA);
-        Automovil kia = new Automovil("kia", "Rio", Color.GRIS, motorRio, new Tanque(50),conductorRio, RuedasRio);
+        Automovil kia = new Automovil("kia", "Rio", Color.GRIS, motorRio, new Tanque(50));
         kia.setTipo(TipoAutomovil.CONVERTIBLE);
+        kia.setConductor(conductorRio);
+        Rueda[] RuedasRio = new Rueda[5];
+        for(int i = 0; i < RuedasRio.length; i++){
+            kia.addRueda(new Rueda("Michelin", 16,7.5));
+        }
 
 
         System.out.println(ANSI_GREEN  + subaru.detalle() + ANSI_RESET);
