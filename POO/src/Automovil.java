@@ -4,7 +4,7 @@ public class Automovil {
     private String modelo;
     private Color color = Color.GRIS;
     private Motor motor;
-    private  Tanque tanque;
+    private Tanque tanque;
     private Persona conductor;
     private Rueda[] ruedas;
 
@@ -54,9 +54,12 @@ public class Automovil {
     }
 
     public String detalle() {
-        String detalle ="auto.id = " + this.id + "\n" +
-                        "auto.fabricante = " + this.getFabricante() + "\n" +
-                        "auto.modelo = " + this.getModelo();
+        String detalle ="auto.id = " + this.id + "\n";
+        if(this.getConductor() != null){
+            detalle += "auto.getConductor = " + this.getConductor() + "\n";
+        }
+            detalle += "auto.fabricante = " + this.getFabricante() + "\n" +
+                        "auto.modelo = " + this.getModelo() + "\n";
         if (this.getTipo() != null){
              detalle += "auto.tipo = " + this.getTipo().getDescripcion();
         }
@@ -65,6 +68,14 @@ public class Automovil {
         if (this.getMotor() != null){
             detalle +="auto.cilindrada = " + this.motor.getCilindrada() + "\n";
         }
+        if (this.getRuedas() != null){
+            for (Rueda rueda: this.getRuedas()){
+                detalle += "\n" + "Fabricante de Ruedas: " + rueda.getFabricante() + "\n" +
+                           "Rin de Rueda: " + rueda.getRin() + "\n" +
+                           "Ancho de Rueda: " + rueda.getAncho();
+            }
+        }
+
 
         return detalle;
     }

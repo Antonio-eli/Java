@@ -20,4 +20,13 @@ public class Rueda {
     public double getAncho() {
         return ancho;
     }
+
+    @Override
+    public String toString() {
+        return "Rueda{" +
+                "fabricante='" + fabricante + '\'' +
+                ", rin=" + rin +
+                ", ancho=" + ancho +
+                '}';
+    }
 }
