@@ -1,38 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="c21b4afc-8dd7-4650-aa69-c69278454c26" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/paquetes.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/coder/roan/app/EjemploPaquetes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/coder/roan/app/hogar/Persona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POO/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POO/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POO/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POO/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POO/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POO/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POO/POO.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POO/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POO/out/production/POO/Automovil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POO/out/production/POO/EjemploAutomovil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POO/src/Automovil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POO/src/Color.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POO/src/EjemploAutomovil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POO/src/EjemploAutomovilArreglo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POO/src/EjemploAutomovilEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POO/src/EjemploAutomovilRelacionesObjetos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POO/src/EjemploAutomovilStatic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POO/src/Motor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POO/src/Persona.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POO/src/Rueda.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POO/src/Tanque.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POO/src/TipoAutomovil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POO/src/TipoMotor.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/coder/roan/app/Perro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/paquetes/com/coder/roan/app/EjemploPaquetes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/paquetes/com/coder/roan/app/EjemploPaquetes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/paquetes/com/coder/roan/app/hogar/Persona.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/paquetes/com/coder/roan/app/hogar/Persona.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/coder/roan/app/EjemploPaquetes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/coder/roan/app/EjemploPaquetes.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
