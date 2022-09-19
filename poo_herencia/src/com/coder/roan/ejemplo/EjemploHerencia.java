@@ -1,11 +1,15 @@
-package com.coder.roan.pooherencia;
+package com.coder.roan.ejemplo;
+
+import com.coder.roan.pooherencia.Alumno;
+import com.coder.roan.pooherencia.Profesor;
 
 public class EjemploHerencia {
     public static void main(String[] args) {
         Alumno alumno = new Alumno();
         alumno.setNombre("Eliceo");
         alumno.setApellido("Romero");
-        System.out.println(alumno.getNombre() + " " + alumno.getApellido());
+        alumno.setInstitucion("UNAM");
+        System.out.println(alumno.getNombre() + " " + alumno.getApellido() + " estudia en: " + alumno.getInstitucion());
 
         Profesor profesor = new Profesor();
         profesor.setNombre("Raul");
