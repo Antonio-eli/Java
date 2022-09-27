@@ -1,20 +1,20 @@
 package org.coder.roan.appfacturas.modelo;
 
 public class ItemFactura {
-    private int cantida;
+    private int cantidad;
     private Producto producto;
 
-    public ItemFactura(int cantida, Producto producto) {
-        this.cantida = cantida;
+    public ItemFactura(int cantidad, Producto producto) {
+        this.cantidad = cantidad;
         this.producto = producto;
     }
 
-    public int getCantida() {
-        return cantida;
+    public int getCantidad() {
+        return cantidad;
     }
 
-    public void setCantida(int cantida) {
-        this.cantida = cantida;
+    public void setCantidad(int cantida) {
+        this.cantidad = cantida;
     }
 
     public Producto getProducto() {
@@ -23,5 +23,9 @@ public class ItemFactura {
 
     public void setProducto(Producto producto) {
         this.producto = producto;
+    }
+
+    public float calcularImporte() {
+        return this.cantidad * this.producto.getPrecio();
     }
 }
