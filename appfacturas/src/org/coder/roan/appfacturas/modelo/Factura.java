@@ -1,5 +1,6 @@
 package org.coder.roan.appfacturas.modelo;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Factura {
@@ -85,6 +86,26 @@ public class Factura {
                 .append(cliente.getRfc())
                 .append("\n")
                 .append("\n#\tNombre\t$\tCanti.\tTotal\n");
+        SimpleDateFormat df = new SimpleDateFormat("dd 'de' MMMM, yyyy");
+        sb.append("Fecha emisión: ")
+                .append(df.format(this.fecha))
+                .append("\n");
+        for (ItemFactura item: this.items) {
+            if (item == null){
+                continue;
+            }
+            sb.append(item.getProducto().getCodigo())
+                    .append("\t")
+                    .append(item.getProducto().getNombre())
+                    .append("\t")
+                    .append(item.getProducto().getPrecio())
+                    .append(item.getCantidad())
+                    .append(item.calcularImporte())
+                    .append("\n");
+        }
+        sb.append("\nGan Total")
+                .append(calcularTotal());
+
         return sb.toString();
     }
 
