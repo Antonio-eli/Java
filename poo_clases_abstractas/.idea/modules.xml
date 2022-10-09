@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/appfacturas.iml" filepath="$PROJECT_DIR$/appfacturas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/poo_clases_abstractas.iml" filepath="$PROJECT_DIR$/poo_clases_abstractas.iml" />
     </modules>
   </component>
 </project>
