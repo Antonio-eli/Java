@@ -1,12 +1,7 @@
 package com.coderroan.pooclasesabstractas.form;
-
-import com.coderroan.pooclasesabstractas.form.elementos.ElementoForm;
-import com.coderroan.pooclasesabstractas.form.elementos.InputForm;
-import com.coderroan.pooclasesabstractas.form.elementos.SelectForm;
-import com.coderroan.pooclasesabstractas.form.elementos.TextareaForm;
+import com.coderroan.pooclasesabstractas.form.elementos.*;
 import com.coderroan.pooclasesabstractas.form.elementos.select.Opcion;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -23,9 +18,18 @@ public class EjemploForm {
         lenguaje.addOpcion(java)
                 .addOpcion(new Opcion("2", "Python"))
                 .addOpcion(new Opcion("3", "JavaScript"))
-                .addOpcion(new Opcion("4", "TypeScript"))
+                .addOpcion(new Opcion("4", "TypeScript").setSelected())
                 .addOpcion(new Opcion("5", "Php"));
 
+        ElementoForm saludar = new ElementoForm("Saludo") {
+            @Override
+            public String dibujarHtml() {
+                  return "<input disabled name='" + this.nombre + "' value=\"" + this.valor + "\" >";
+
+            }
+        };
+
+        saludar.setValor("Hola que tal este campo esta deshabilitado");
         username.setValor("Eliceo.roan");
         password.setValor("1234");
         email.setValor("eliceoroan@gmail.com");
@@ -33,7 +37,7 @@ public class EjemploForm {
         experiencia.setValor(".. Más de 10 años de experiencia ..");
         java.setSelected(true);
 
-        List<ElementoForm> elementos = Arrays.asList(username,password,email,edad,experiencia,lenguaje);
+        List<ElementoForm> elementos = Arrays.asList(username,password,email,edad,experiencia,lenguaje,saludar);
         /*for (ElementoForm elemento: elementos){
             System.out.println(elemento.dibujarHtml());
             System.out.println("<br>");
