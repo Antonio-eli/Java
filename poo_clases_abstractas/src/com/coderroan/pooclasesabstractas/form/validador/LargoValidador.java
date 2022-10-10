@@ -1,7 +1,7 @@
 package com.coderroan.pooclasesabstractas.form.validador;
 
 public class LargoValidador extends Validador{
-    protected String mensaje = "el campo debe tener minimo %d caracteres %d caracteres";
+    protected String mensaje = ANSI_RED + "el campo debe tener minimo %d caracteres %d caracteres" + ANSI_RESET;
     private int minimo = 0;
     private int maximo = Integer.MAX_VALUE;
 

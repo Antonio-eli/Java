@@ -1,7 +1,7 @@
 package com.coderroan.pooclasesabstractas.form.validador;
 
 public class RequeridoValidador extends Validador{
-    protected String mensaje = "el campo es requerido";
+    protected String mensaje = ANSI_RED + "el campo es requerido" + ANSI_RESET;
     @Override
     public void setMensaje(String mensaje) {
         this.mensaje = mensaje;

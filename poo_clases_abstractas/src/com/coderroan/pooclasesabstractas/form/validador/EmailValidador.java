@@ -1,7 +1,7 @@
 package com.coderroan.pooclasesabstractas.form.validador;
 
 public class EmailValidador extends Validador{
-    protected String mensaje = "el formato de email es invalido";
+    protected String mensaje = ANSI_RED + "el formato de email es invalido" + ANSI_RESET;
     private final static String EMAIL_REGEX = "^(.+)@(.+)$";
     @Override
     public void setMensaje(String mensaje) {
