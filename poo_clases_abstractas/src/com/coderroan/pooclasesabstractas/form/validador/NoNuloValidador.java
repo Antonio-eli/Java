@@ -1,7 +1,7 @@
 package com.coderroan.pooclasesabstractas.form.validador;
 
 public class NoNuloValidador extends Validador{
-    protected String mensaje = ANSI_RED + "el campo no puede ser nulo" + ANSI_RESET;
+    protected String mensaje = ANSI_RED + "el campo %s no puede ser nulo" + ANSI_RESET;
     @Override
     public void setMensaje(String mensaje) {
         this.mensaje = mensaje;

@@ -1,7 +1,7 @@
 package com.coderroan.pooclasesabstractas.form.validador;
 
 public class NumeroValidador extends Validador{
-    protected String mensaje = ANSI_RED + "el campo debe ser un número" + ANSI_RESET;
+    protected String mensaje = ANSI_RED + "el campo %s debe ser un número" + ANSI_RESET;
     @Override
     public void setMensaje(String mensaje) {
         this.mensaje = mensaje;

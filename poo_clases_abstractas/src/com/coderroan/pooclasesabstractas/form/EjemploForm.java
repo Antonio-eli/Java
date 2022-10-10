@@ -10,7 +10,7 @@ public class EjemploForm {
     public static void main(String[] args) {
         InputForm username = new InputForm("username");
         username.addValidador(new RequeridoValidador());
-        InputForm password = new InputForm("clave", "password");
+        InputForm password = new InputForm("password", "password");
         password.addValidador(new RequeridoValidador()).addValidador(new LargoValidador(6, 12));
         InputForm email    = new InputForm("email", "email");
         email.addValidador(new RequeridoValidador()).addValidador(new EmailValidador());
@@ -35,9 +35,9 @@ public class EjemploForm {
         };
 
         saludar.setValor("Hola que tal este campo esta deshabilitado");
-        username.setValor("Eliceo.roan");
-        password.setValor("123456");
-        email.setValor("eliceoroan@gmail.com");
+        username.setValor("");
+        password.setValor("12345");
+        email.setValor("eliceoroangmail.com");
         edad.setValor("24");
         experiencia.setValor(".. Más de 10 años de experiencia ..");
         java.setSelected(true);
@@ -54,7 +54,7 @@ public class EjemploForm {
 
         elementos.forEach(e -> {
             if (!e.esValido()){
-                e.getErrores().forEach(err -> System.out.println(e.getNombre() + ": " + err));
+                e.getErrores().forEach(System.out::println);
             }
         });
     }
