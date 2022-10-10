@@ -1,6 +1,8 @@
 package com.coderroan.pooclasesabstractas.form.validador;
 
-public class LargoValidador extends Validador{
+import com.coderroan.pooclasesabstractas.form.validador.mensaje.IMensajeFormateable;
+
+public class LargoValidador extends Validador implements IMensajeFormateable {
     protected String mensaje = ANSI_RED + "el campo %s debe tener minimo %d caracteres %d caracteres" + ANSI_RESET;
     private int minimo = 0;
     private int maximo = Integer.MAX_VALUE;
@@ -41,7 +43,8 @@ public class LargoValidador extends Validador{
         return (largo >= minimo && largo <= maximo);
     }
 
-    public String getMensajeFormateado(String campo){
+    @Override
+    public String getMensajeFormateado(String campo) {
         return String.format(this.mensaje, campo, this.minimo, this.maximo);
     }
 }
