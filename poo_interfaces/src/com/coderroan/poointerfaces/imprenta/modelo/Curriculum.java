@@ -14,8 +14,8 @@ public class Curriculum extends Hoja{
         this.experiencia = new ArrayList<>();
     }
 
-    public Curriculum addExperiencia(String experiencia){
-        experiencia.add(experiencia);
+    public Curriculum addExperiencia(String exp){
+        experiencia.add(exp);
         return this;
     }
 

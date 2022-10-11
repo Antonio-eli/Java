@@ -12,6 +12,6 @@ public class Informe extends Hoja{
 
     @Override
     public String imprimir() {
-        return "Informe escrito por: " + autor + "Revisado por: " + revisor + "\n" + this.contenido;
+        return "Informe escrito por: " + autor + "\n" + "Revisado por: " + revisor + "\n" + this.contenido;
     }
 }
