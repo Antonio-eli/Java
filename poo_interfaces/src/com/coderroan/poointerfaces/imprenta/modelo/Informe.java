@@ -1,10 +1,10 @@
 package com.coderroan.poointerfaces.imprenta.modelo;
 
 public class Informe extends Hoja implements Imprimible{
-    private String autor;
-    private String revisor;
+    private Persona autor;
+    private Persona revisor;
 
-    public Informe(String autor, String revisor, String contenido) {
+    public Informe(Persona autor, Persona revisor, String contenido) {
         super(contenido);
         this.autor = autor;
         this.revisor = revisor;
@@ -12,6 +12,6 @@ public class Informe extends Hoja implements Imprimible{
 
     @Override
     public String imprimir() {
-        return "Informe escrito por: " + autor + "\n" + "Revisado por: " + revisor + "\n" + this.contenido;
+        return "Informe escrito por: " + autor + "\n" + "Revisado por: " + revisor + "\n" + "Titulo informe: " + this.contenido + "\n";
     }
 }

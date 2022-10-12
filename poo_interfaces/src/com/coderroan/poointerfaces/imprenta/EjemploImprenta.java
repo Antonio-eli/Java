@@ -4,21 +4,21 @@ import com.coderroan.poointerfaces.imprenta.modelo.*;
 
 public class EjemploImprenta {
     public static void main(String[] args) {
-        Curriculum cv = new Curriculum("Eliceo", "Ing. Sistemas", "Resumen laboral");
-        cv.addExperiencia("java");
-        cv.addExperiencia("Oracle DBA");
-        cv.addExperiencia("Spring Framework");
-        cv.addExperiencia("Desarrollador fullstack");
-        cv.addExperiencia("Angular");
+        Curriculum cv = new Curriculum( new Persona("Eliceo", "Romero"), "Ing. Sistemas", "Resumen laboral");
+        cv.addExperiencia("java")
+                .addExperiencia("Oracle DBA")
+                .addExperiencia("Spring Framework")
+                .addExperiencia("Desarrollador fullstack")
+                .addExperiencia("Angular");
 
-        Libro libro = new Libro("Erick Gama", "Patrones de diseño: Elementos reusables POO", Genero.PROGRAMACION);
+        Libro libro = new Libro( new Persona("Erick", "Gama"), "Patrones de diseño: Elementos reusables POO", Genero.PROGRAMACION);
         libro.addPagina(new Pagina("Capítulo Patron Singlenton"))
                 .addPagina(new Pagina("Capítulo Patron observador"))
                 .addPagina(new Pagina("Capítulo Patron Factory"))
                 .addPagina(new Pagina("Capítulo Patron Composite"))
                 .addPagina(new Pagina("Capítulo Patron Facade"));
 
-        Informe informe = new Informe("Martin Fowler", "James", "Estudio de microservicios");
+        Informe informe = new Informe(new Persona("Martin", "Fowler"), new Persona("James", "Joe"), "Estudio de microservicios");
         imprimir(cv);
         imprimir(informe);
         imprimir(libro);
