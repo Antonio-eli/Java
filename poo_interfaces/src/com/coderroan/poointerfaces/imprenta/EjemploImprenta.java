@@ -1,6 +1,7 @@
 package com.coderroan.poointerfaces.imprenta;
 
 import com.coderroan.poointerfaces.imprenta.modelo.*;
+import static com.coderroan.poointerfaces.imprenta.modelo.Imprimible.imprimir;
 
 public class EjemploImprenta {
     public static void main(String[] args) {
@@ -23,8 +24,12 @@ public class EjemploImprenta {
         imprimir(informe);
         imprimir(libro);
 
-    }
-    public static void imprimir(Imprimible imprimible){
-        System.out.println(imprimible.imprimir());
+        imprimir(new Imprimible() {
+            @Override
+            public String imprimir() {
+                return "Hola que tal, imprimiendo un objeto generico de una clase anonima";
+            }
+        });
+
     }
 }

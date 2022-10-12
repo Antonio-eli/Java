@@ -1,5 +1,12 @@
 package com.coderroan.poointerfaces.imprenta.modelo;
 
 public interface Imprimible {
-    String imprimir();
-}
+    String TEXTO_DEFECTO = "Imprimiendo un valor por defecto";
+
+    default String imprimir(){
+        return TEXTO_DEFECTO;
+    }
+    static void imprimir(Imprimible imprimible){
+        System.out.println(imprimible.imprimir());
+    }
+ }
