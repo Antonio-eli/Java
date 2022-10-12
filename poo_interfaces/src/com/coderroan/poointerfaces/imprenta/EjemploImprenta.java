@@ -11,12 +11,20 @@ public class EjemploImprenta {
         cv.addExperiencia("Desarrollador fullstack");
         cv.addExperiencia("Angular");
 
+        Libro libro = new Libro("Erick Gama", "Patrones de diseño: Elementos reusables POO", Genero.PROGRAMACION);
+        libro.addPagina(new Pagina("Capítulo Patron Singlenton"))
+                .addPagina(new Pagina("Capítulo Patron observador"))
+                .addPagina(new Pagina("Capítulo Patron Factory"))
+                .addPagina(new Pagina("Capítulo Patron Composite"))
+                .addPagina(new Pagina("Capítulo Patron Facade"));
+
         Informe informe = new Informe("Martin Fowler", "James", "Estudio de microservicios");
         imprimir(cv);
         imprimir(informe);
+        imprimir(libro);
 
     }
-    public static void imprimir(Hoja imprimible){
+    public static void imprimir(Imprimible imprimible){
         System.out.println(imprimible.imprimir());
     }
 }
