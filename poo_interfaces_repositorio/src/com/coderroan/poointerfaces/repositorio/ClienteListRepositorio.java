@@ -1,6 +1,7 @@
 package com.coderroan.poointerfaces.repositorio;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import com.coderroan.poointerfaces.modelo.Cliente;
@@ -52,12 +53,45 @@ public class ClienteListRepositorio implements CrudRepositorio, OrdenableReposit
 
 	@Override
 	public List<Cliente> listar(String campo, Direccion dir) {
-		return null;
+		dataSource.sort((a, b) -> {
+				int resultado = 0;
+				if (dir == Direccion.ASC) {
+					switch (campo) {
+					case "id":
+						  resultado = a.getId().compareTo(b.getId());
+						break;
+					case "nombre":
+						  resultado = a.getNombre().compareTo(b.getNombre());
+						break;
+					case "apellido":
+						  resultado = a.getApellido().compareTo(b.getApellido());
+						break;
+					default:
+						break;
+					}
+				} else if(dir == Direccion.DESC) {
+					switch (campo) {
+					case "id":
+						  resultado = b.getId().compareTo(a.getId());
+						break;
+					case "nombre":
+						  resultado = b.getNombre().compareTo(a.getNombre());
+						break;
+					case "apellido":
+						  resultado = b.getApellido().compareTo(a.getApellido());
+						break;
+					default:
+						break;
+					}
+				}
+				return resultado;
+			});
+		return dataSource;
 	}
 
 	@Override
 	public List<Cliente> listar(int desde, int hasta) {
-		return null;
+		return dataSource.subList(desde, hasta);
 	}
 
 }
