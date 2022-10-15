@@ -9,7 +9,7 @@ public class EjemploRepositorio {
     public static final String ANSI_BLUE = "\u001B[34m";
     public static final String ANSI_RESET = "\u001B[0m";
     public static void main(String[] args) {
-        CrudRepositorio repo = new ClienteListRepositorio();
+        OrdenablePaginableCrudRepositorio repo = new ClienteListRepositorio();
         repo.crear(new Cliente("Eliceo", "Romero"));
         repo.crear(new Cliente("Maria", "Gonzalez"));
         repo.crear(new Cliente("Renata", "Lopez"));
@@ -20,11 +20,11 @@ public class EjemploRepositorio {
         clientes.forEach(System.out::println);
 
         System.out.println(ANSI_BLUE + "[ Paginable ]" + ANSI_RESET);
-        List<Cliente> paginable = ((PaginableRepositorio)repo).listar(1,3);
+        List<Cliente> paginable = repo.listar(1,3);
         paginable.forEach(System.out::println);
 
         System.out.println(ANSI_BLUE + "[ Ordenar ]" + ANSI_RESET);
-        List<Cliente> clientesOderAsc = ((OrdenableRepositorio)repo).listar("id", Direccion.ASC);
+        List<Cliente> clientesOderAsc = repo.listar("id", Direccion.ASC);
         for (Cliente c: clientesOderAsc) {
             System.out.println("Cliente: " + c);
         }
@@ -37,10 +37,13 @@ public class EjemploRepositorio {
         System.out.println("Actualizando Apellido: " + maria);
 
         System.out.println(ANSI_BLUE + "[ Datos Editados ]" + ANSI_RESET);
-        ((OrdenableRepositorio)repo).listar("nombre", Direccion.DESC).forEach(System.out::println);
+        repo.listar("nombre", Direccion.DESC).forEach(System.out::println);
 
         System.out.println(ANSI_BLUE + "[ Eliminar Datos ]" + ANSI_RESET);
-        //repo.eliminar(2);
+        repo.eliminar(2);
         repo.listar().forEach(System.out::println);
+
+        System.out.println(ANSI_BLUE + "[ Datos Total ]" + ANSI_RESET);
+        System.out.println("Total de registro: " + repo.total());
     }
 }
