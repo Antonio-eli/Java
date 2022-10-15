@@ -15,26 +15,32 @@ public class EjemploRepositorio {
         repo.crear(new Cliente("Renata", "Lopez"));
         repo.crear(new Cliente("Lonardo", "Vargas"));
 
+        System.out.println(ANSI_BLUE + "[ Lista clientes ]" + ANSI_RESET);
         List<Cliente> clientes = repo.listar();
         clientes.forEach(System.out::println);
-        System.out.println(ANSI_BLUE + "==== paginable ====" + ANSI_RESET);
+
+        System.out.println(ANSI_BLUE + "[ Paginable ]" + ANSI_RESET);
         List<Cliente> paginable = ((PaginableRepositorio)repo).listar(1,3);
         paginable.forEach(System.out::println);
-        System.out.println(ANSI_BLUE + "==== Ordenar ====" + ANSI_RESET);
-        List<Cliente> clientesOderAsc = ((OrdenableRepositorio)repo).listar("apellido", Direccion.DESC);
+
+        System.out.println(ANSI_BLUE + "[ Ordenar ]" + ANSI_RESET);
+        List<Cliente> clientesOderAsc = ((OrdenableRepositorio)repo).listar("id", Direccion.ASC);
         for (Cliente c: clientesOderAsc) {
             System.out.println("Cliente: " + c);
         }
-        System.out.println(ANSI_BLUE + "==== Editar  ====" + ANSI_RESET);
-        Cliente mariaActualizar = new Cliente("Eva", "Antonio");
+
+        System.out.println(ANSI_BLUE + "[ Editar ]" + ANSI_RESET);
+        Cliente mariaActualizar = new Cliente("Maria", "Hernández");
         mariaActualizar.setId(2);
         repo.editar(mariaActualizar);
         Cliente maria = repo.porId(2);
-        System.out.println("Maria: " + maria);
-        System.out.println(ANSI_BLUE + "==== Datos Actualizados ====" + ANSI_RESET);
-        ((OrdenableRepositorio)repo).listar("nombre", Direccion.ASC).forEach(System.out::println);
-        System.out.println(ANSI_BLUE + "==== Eliminar Datos ====" + ANSI_RESET);
-        repo.eliminar(4);
+        System.out.println("Actualizando Apellido: " + maria);
+
+        System.out.println(ANSI_BLUE + "[ Datos Editados ]" + ANSI_RESET);
+        ((OrdenableRepositorio)repo).listar("nombre", Direccion.DESC).forEach(System.out::println);
+
+        System.out.println(ANSI_BLUE + "[ Eliminar Datos ]" + ANSI_RESET);
+        //repo.eliminar(2);
         repo.listar().forEach(System.out::println);
     }
 }

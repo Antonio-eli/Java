@@ -5,22 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e65dee3-16f7-4d95-9bc7-924153010754" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/poo_interfaces_repositorio.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/coderroan/poointerfaces/EjemploRepositorio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/coderroan/poointerfaces/modelo/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/coderroan/poointerfaces/modelo/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/coderroan/poointerfaces/EjemploRepositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/coderroan/poointerfaces/EjemploRepositorio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/coderroan/poointerfaces/repositorio/ClienteListRepositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/coderroan/poointerfaces/repositorio/ClienteListRepositorio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/coderroan/poointerfaces/repositorio/OrdenableRepositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/coderroan/poointerfaces/repositorio/OrdenableRepositorio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/coderroan/poointerfaces/repositorio/PaginableRepositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/coderroan/poointerfaces/repositorio/PaginableRepositorio.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
