@@ -1,6 +1,8 @@
-package com.coderroan.poointerfaces.repositorio;
+package com.coderroan.poointerfaces.repositorio.lista;
 
 import com.coderroan.poointerfaces.modelo.Cliente;
+import com.coderroan.poointerfaces.repositorio.AbstractaListRepositorio;
+import com.coderroan.poointerfaces.repositorio.Direccion;
 
 import java.util.ArrayList;
 import java.util.List;

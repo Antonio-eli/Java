@@ -2,6 +2,7 @@ package com.coderroan.poointerfaces;
 
 import com.coderroan.poointerfaces.modelo.Cliente;
 import com.coderroan.poointerfaces.repositorio.*;
+import com.coderroan.poointerfaces.repositorio.lista.ClienteListRepositorio;
 
 import java.util.List;
 
