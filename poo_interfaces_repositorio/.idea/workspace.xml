@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e65dee3-16f7-4d95-9bc7-924153010754" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/coderroan/poointerfaces/repositorio/ContableRepositorio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/coderroan/poointerfaces/repositorio/OrdenablePaginableCrudRepositorio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/coderroan/generics/EjemploGenericos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/coderroan/poointerfaces/EjemploRepositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/coderroan/poointerfaces/EjemploRepositorio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/coderroan/poointerfaces/repositorio/ClienteListRepositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/coderroan/poointerfaces/repositorio/ClienteListRepositorio.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -49,7 +45,20 @@
       <recent name="C:\Users\elice\Desktop\Java\Java\poo_interfaces_repositorio\src\com\coderroan\poointerfaces\modelo" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.EjemploGenericos">
+    <configuration name="EjemploGenericos" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.coderroan.generics.EjemploGenericos" />
+      <module name="poo_interfaces_repositorio" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.coderroan.generics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EjemploRepositorio" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.coderroan.poointerfaces.EjemploRepositorio" />
       <module name="poo_interfaces_repositorio" />
@@ -65,6 +74,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.EjemploGenericos" />
         <item itemvalue="Application.EjemploRepositorio" />
       </list>
     </recent_temporary>
@@ -90,5 +100,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
