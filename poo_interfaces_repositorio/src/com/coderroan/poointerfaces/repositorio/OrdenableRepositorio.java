@@ -1,5 +1,4 @@
 package com.coderroan.poointerfaces.repositorio;
-import com.coderroan.poointerfaces.modelo.Cliente;
 
 import java.util.List;
 
