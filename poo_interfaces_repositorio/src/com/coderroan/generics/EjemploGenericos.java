@@ -1,6 +1,7 @@
 package com.coderroan.generics;
 
 import com.coderroan.poointerfaces.modelo.Cliente;
+import com.coderroan.poointerfaces.modelo.ClientePremium;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -27,9 +28,20 @@ public class EjemploGenericos {
         enterosLista.forEach(System.out::println);
         nombres.forEach(System.out::println);
 
+        System.out.println(ANSI_BLUE + "[ Métodos genéricos con límites - Bounded Generics ]" + ANSI_RESET);
+        List<ClientePremium> clientePremiumList = fromArrayToList(new ClientePremium[]{
+                new ClientePremium("Nora", "Sanchez")
+        });
+
     }
 
     public static <T> List<T> fromArrayToList(T[] c){
+        return Arrays.asList(c);
+    }
+    public static <T extends Number> List<T> fromArrayToList(T[] c){
+        return Arrays.asList(c);
+    }
+    public static <T extends Cliente & Comparable<T>> List<T> fromArrayToList(T[] c){
         return Arrays.asList(c);
     }
     public static <T, G> List<T> fromArrayToList(T[] c, G[] x){
