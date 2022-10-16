@@ -28,10 +28,13 @@ public class EjemploGenericos {
         enterosLista.forEach(System.out::println);
         nombres.forEach(System.out::println);
 
-        System.out.println(ANSI_BLUE + "[ Métodos genéricos con límites - Bounded Generics ]" + ANSI_RESET);
         List<ClientePremium> clientePremiumList = fromArrayToList(new ClientePremium[]{
                 new ClientePremium("Nora", "Sanchez")
         });
+        System.out.println(ANSI_BLUE + "[ Métodos genéricos con tipo List y comodines - Wildcards Generics ]" + ANSI_RESET);
+        imprimirClientes(clientes);
+        imprimirClientes(clienteLista);
+        imprimirClientes(clientePremiumList);
 
     }
 
@@ -51,4 +54,10 @@ public class EjemploGenericos {
 
         return Arrays.asList(c);
     }
+
+    public static void imprimirClientes(List<? extends Cliente> clientes){
+        clientes.forEach(System.out::println);
+    }
 }
+
+
