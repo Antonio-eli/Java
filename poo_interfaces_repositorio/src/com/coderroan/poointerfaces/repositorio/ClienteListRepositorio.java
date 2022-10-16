@@ -1,21 +1,11 @@
 package com.coderroan.poointerfaces.repositorio;
+
 import com.coderroan.poointerfaces.modelo.Cliente;
+
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
-public class ClienteListRepositorio implements OrdenablePaginableCrudRepositorio {
-
-	private List<Cliente> dataSource;
-
-	public ClienteListRepositorio() {
-		this.dataSource = new ArrayList<Cliente>();
-	}
-
-	@Override
-	public List<Cliente> listar() {
-		return dataSource;
-	}
+public  class ClienteListRepositorio extends AbstractaListRepositorio<Cliente> {
 
 	@Override
 	public Cliente porId(Integer id) {
@@ -30,21 +20,10 @@ public class ClienteListRepositorio implements OrdenablePaginableCrudRepositorio
 	}
 
 	@Override
-	public void crear(Cliente cliente) {
-		this.dataSource.add(cliente);
-	}
-
-	@Override
 	public void editar(Cliente cliente) {
 		Cliente cli = this.porId(cliente.getId());
 		cli.setNombre(cliente.getNombre());
 		cli.setApellido(cliente.getApellido());
-		
-	}
-
-	@Override
-	public void eliminar(Integer id) {
-		this.dataSource.remove(this.porId(id));
 		
 	}
 
@@ -63,10 +42,6 @@ public class ClienteListRepositorio implements OrdenablePaginableCrudRepositorio
 		return listaOrdenada;
 	}
 
-	@Override
-	public List<Cliente> listar(int desde, int hasta) {
-		return dataSource.subList(desde, hasta);
-	}
 	public static int ordenar(String campo, Cliente a, Cliente b){
 		int resultado = 0;
 		switch (campo) {
@@ -80,8 +55,4 @@ public class ClienteListRepositorio implements OrdenablePaginableCrudRepositorio
 		return resultado;
 	}
 
-	@Override
-	public int total() {
-		return this.dataSource.size();
-	}
 }

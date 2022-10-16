@@ -9,7 +9,7 @@ public class EjemploRepositorio {
     public static final String ANSI_BLUE = "\u001B[34m";
     public static final String ANSI_RESET = "\u001B[0m";
     public static void main(String[] args) {
-        OrdenablePaginableCrudRepositorio repo = new ClienteListRepositorio();
+        OrdenablePaginableCrudRepositorio<Cliente> repo = new ClienteListRepositorio();
         repo.crear(new Cliente("Eliceo", "Romero"));
         repo.crear(new Cliente("Maria", "Gonzalez"));
         repo.crear(new Cliente("Renata", "Lopez"));

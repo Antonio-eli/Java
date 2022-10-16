@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e65dee3-16f7-4d95-9bc7-924153010754" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/coderroan/poointerfaces/repositorio/AbstractaListRepositorio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/coderroan/genericsclass/Camion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/coderroan/genericsclass/Camion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/coderroan/genericsclass/EjemploGenericos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/coderroan/genericsclass/EjemploGenericos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/coderroan/poointerfaces/EjemploRepositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/coderroan/poointerfaces/EjemploRepositorio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/coderroan/poointerfaces/repositorio/ClienteListRepositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/coderroan/poointerfaces/repositorio/ClienteListRepositorio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/coderroan/poointerfaces/repositorio/CrudRepositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/coderroan/poointerfaces/repositorio/CrudRepositorio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/coderroan/poointerfaces/repositorio/OrdenablePaginableCrudRepositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/coderroan/poointerfaces/repositorio/OrdenablePaginableCrudRepositorio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/coderroan/poointerfaces/repositorio/OrdenableRepositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/coderroan/poointerfaces/repositorio/OrdenableRepositorio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/coderroan/poointerfaces/repositorio/PaginableRepositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/coderroan/poointerfaces/repositorio/PaginableRepositorio.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +52,11 @@
       <recent name="C:\Users\elice\Desktop\Java\Java\poo_interfaces_repositorio\src\com\coderroan\poointerfaces\repositorio" />
       <recent name="C:\Users\elice\Desktop\Java\Java\poo_interfaces_repositorio\src\com\coderroan\poointerfaces\modelo" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.coderroan.poointerfaces.repositorio" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.EjemploGenericos (1)">
+  <component name="RunManager" selected="Application.EjemploRepositorio">
     <configuration name="EjemploGenericos (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.coderroan.genericsclass.EjemploGenericos" />
       <module name="poo_interfaces_repositorio" />
@@ -90,9 +98,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.EjemploRepositorio" />
         <item itemvalue="Application.EjemploGenericos (1)" />
         <item itemvalue="Application.EjemploGenericos" />
-        <item itemvalue="Application.EjemploRepositorio" />
       </list>
     </recent_temporary>
   </component>
