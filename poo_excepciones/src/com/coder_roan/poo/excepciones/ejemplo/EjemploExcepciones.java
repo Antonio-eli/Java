@@ -8,16 +8,14 @@ public class EjemploExcepciones {
     public static final String ANSI_YELLOW = "\u001B[33m";
     public static void main(String[] args) {
         Calculadora cal = new Calculadora();
-        String valor = JOptionPane.showInputDialog("Ingrese un entero:");
-        int divisor;
-        double division;
+        String numerador = JOptionPane.showInputDialog("Ingrese un entero numerador:");
+        String denominador = JOptionPane.showInputDialog("Ingrese un entero denominador:");
         try {
-            divisor = Integer.parseInt(valor);
-            division = cal.dividir(10, divisor);
-            System.out.println("division = " + division);
-        } catch (NumberFormatException nfe){
-            System.out.println(ANSI_RED + "Por favor ingrese un valor numérico: " + nfe.getMessage() + ANSI_RESET);
-            main(args);
+            double division2 = cal.dividir(numerador, denominador);
+            System.out.println("division2 = " + division2);
+        } catch (FormatoNumeroException fne){
+            System.out.println(ANSI_RED + "Se detecto una excepción: ingrese un número válido\n" + fne.getMessage() + ANSI_RESET);
+            fne.printStackTrace();
         } catch (DivisionPorZroException dze){
             System.out.println(ANSI_RED + "Capturamos la excepción en tiempo de ejecución: " + dze.getMessage() + ANSI_RESET);
             main(args);

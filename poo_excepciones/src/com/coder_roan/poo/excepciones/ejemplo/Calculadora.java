@@ -7,4 +7,16 @@ public class Calculadora  {
         }
         return numerador /(double)divisor;
     }
+
+    public double dividir(String numerador, String divisor) throws DivisionPorZroException, FormatoNumeroException {
+        try {
+            int num = Integer.parseInt(numerador);
+            int div = Integer.parseInt(divisor);
+            return this.dividir(num, div);
+        }catch (NumberFormatException nfe){
+            throw new FormatoNumeroException("Por favor ingrese un valor numérico en el numerador y denominador: ");
+        }
+
+
+    }
 }
