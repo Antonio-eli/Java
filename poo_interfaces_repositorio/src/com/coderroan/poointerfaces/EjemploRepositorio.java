@@ -2,9 +2,7 @@ package com.coderroan.poointerfaces;
 
 import com.coderroan.poointerfaces.modelo.Cliente;
 import com.coderroan.poointerfaces.repositorio.*;
-import com.coderroan.poointerfaces.repositorio.excepciones.AccesoDatoException;
-import com.coderroan.poointerfaces.repositorio.excepciones.EscrituraAccesoDatoException;
-import com.coderroan.poointerfaces.repositorio.excepciones.LecturaAccesoDatoException;
+import com.coderroan.poointerfaces.repositorio.excepciones.*;
 import com.coderroan.poointerfaces.repositorio.lista.ClienteListRepositorio;
 
 import java.util.List;
@@ -20,7 +18,9 @@ public class EjemploRepositorio {
             repo.crear(new Cliente("Maria", "Gonzalez"));
             repo.crear(new Cliente("Renata", "Lopez"));
             repo.crear(new Cliente("Lonardo", "Vargas"));
-            repo.crear(null);
+            Cliente martin =  new Cliente("Martin", "Carbajal");
+            repo.crear(martin);
+            repo.crear(martin);
 
             System.out.println(ANSI_BLUE + "[ Lista clientes ]" + ANSI_RESET);
             List<Cliente> clientes = repo.listar();
@@ -52,6 +52,9 @@ public class EjemploRepositorio {
 
             System.out.println(ANSI_BLUE + "[ Datos Total ]" + ANSI_RESET);
             System.out.println("Total de registro: " + repo.total());
+        } catch (RegistroDuplicadoDatoException e){
+            System.out.println("Excepción de Registro duplicado: " + e.getMessage());
+            e.printStackTrace();
         } catch (LecturaAccesoDatoException e) {
             System.out.println("Excepción de Lectura: " + e.getMessage());
             e.printStackTrace();
