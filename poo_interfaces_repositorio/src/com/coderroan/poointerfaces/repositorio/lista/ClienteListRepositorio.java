@@ -3,6 +3,7 @@ package com.coderroan.poointerfaces.repositorio.lista;
 import com.coderroan.poointerfaces.modelo.Cliente;
 import com.coderroan.poointerfaces.repositorio.AbstractaListRepositorio;
 import com.coderroan.poointerfaces.repositorio.Direccion;
+import com.coderroan.poointerfaces.repositorio.excepciones.LecturaAccesoDatoException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +11,7 @@ import java.util.List;
 public  class ClienteListRepositorio extends AbstractaListRepositorio<Cliente> {
 
 	@Override
-	public void editar(Cliente cliente) {
+	public void editar(Cliente cliente) throws LecturaAccesoDatoException {
 		Cliente cli = this.porId(cliente.getId());
 		cli.setNombre(cliente.getNombre());
 		cli.setApellido(cliente.getApellido());
