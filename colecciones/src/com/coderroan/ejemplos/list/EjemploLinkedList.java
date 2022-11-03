@@ -1,6 +1,7 @@
-package com.coderroan.ejemplos.set;
+package com.coderroan.ejemplos.list;
 
 import com.coderroan.ejemplos.modelo.Alumno;
+import com.coderroan.ejemplos.set.Color;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
