@@ -74,14 +74,31 @@ public class EjemploHashMap {
 
         System.out.println(Color.BLUE_BOLD + ":: Metodo entrySet ::" + Color.RESET);
         for (Map.Entry<String, Object> par : persona.entrySet()){
-            System.out.println(par.getKey() + " => " + par.getValue());
+            Object valor = par.getValue();
+            if (valor instanceof Map){
+                String nom = (String) persona.get("Nombre");
+                Map<String, String> direccionMap = (Map<String, String>) valor;
+                for (Map.Entry<String, String> parDir: direccionMap.entrySet()){
+                    System.out.println(parDir.getKey() + " -> " + parDir.getValue());
+                }
+            }else{
+                System.out.println(par.getKey() + " => " + valor);
+            }
         }
 
-        System.out.println(Color.BLUE_BOLD + ":: Alternativa simple ::" + Color.RESET);
+        System.out.println(Color.BLUE_BOLD + ":: Casteo direccionMap ::" + Color.RESET);
 
         for (String llave : persona.keySet()) {
             Object valor = persona.get(llave);
-            System.out.println(Color.YELLOW + llave + " -> " + valor + Color.RESET);
+            if (valor instanceof Map){
+                String nom = (String) persona.get("Nombre");
+                Map<String, String> direccionMap = (Map<String, String>) valor;
+                System.out.println("El pais de " + nom + " es: " + direccionMap.get("pais"));
+                System.out.println("La ciudad de " + nom + " es: " + direccionMap.get("ciudad"));
+                System.out.println("La ciudad de " + nom + " es: " + direccionMap.get("estado"));
+            }else{
+                System.out.println(Color.YELLOW + llave + " -> " + valor + Color.RESET);
+            }
         }
 
         System.out.println(Color.BLUE_BOLD + ":: Expresion lamda con Java 8::" + Color.RESET);
