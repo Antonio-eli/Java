@@ -10,11 +10,11 @@ public class EjemploAgendarTareaTimer {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                System.out.println("Tarea realizada en: " +  new Date() + " nombre del Thread: " + Thread.currentThread().getName());
-                System.out.println("Finaliza el tiempo");
+                System.out.println("Tarea realizada en: " + new Date() + " nombre del Thread: " + Thread.currentThread().getName());
+                System.out.println("Finaliza el timepo");
                 timer.cancel();
             }
         }, 5000);
-        System.out.println("Agendamos una tarea para 5 minutos mas ...");
+        System.out.println("Agendamos una tarea para 5 segundos mas...");
     }
 }
