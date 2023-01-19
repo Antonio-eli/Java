@@ -1,2 +1,31 @@
 # Java
-Java es un lenguaje sencillo y orientado a objetos, que permite el desarrollo de aplicaciones en diversas áreas, como seguridad, animación, acceso a bases de datos, aplicaciones cliente-servidor, interfaces gráficas, páginas Web interactivas y desarrollo de aplicaciones móviles, entre otras. Una de sus principales características es la creación de módulos reutilizables, que funcionan sin la necesidad de conocer su estructura interna. Esto permite al usuario añadir nuevos módulos, además de obtener programas independientes de la plataforma en la cual fueron desarrollados, gracias a la implementación de la llamada Máquina Virtual de Java (JVM).
+## Notas
+
+- Todo en Java es una clase, excepto los tipos primitivos, ya que representan valor. El JDK ejecuta todo lo que está dentro del método main
+- Las sentencias if (valor) evalúan boléanos true o false
+
+### Variables
+- Java es de tipado alto. Cualquier **variable** que se defina tiene que estar **asociado a un tipo de dato.**
+- Las variables en Java tienen dos partes tipo de dato y el nombre de la variable
+- El tipo de la variable determina los valores que la variable puede contener y las operaciones que puedan realizar
+- En la versión 10 de java se implementa el tipado dinámico
+### Tipo de datos primitivos
+
+- Primitivos, contienen un solo valor e incluyen los tipos como los **enteros, flotantes, caracteres, booleanos etc.**
+- Son ripos de datos escalares que contienen un solo valor. Los tipos primitivos no son objetos
+- Se escribe en minúsculas. Para especificar una literal boolean, se usan las palabras clave true o false escritas en minúscula ``` boolean apagado = true; ```
+### Tipo de datos de referencia
+- Las **variables** de tipo **referencia** NO almacenan valores, sino que nos permiten acceder a métodos y atributos de un objeto. (arrays, clases/instancias, interfaces, String)
+
+### Reglas para definir nombres de variables
+
+- Los nombres de las variables empiezan con minúscula
+- De ser un juego de caracteres comprendido en la codificación unicode
+- No puede ser una palabra reservada del sistema
+- No debe tener el mismo nombre de otras variables cuyas declaraciones aparezcan en el mismo ámbito
+- Se debe utilizar camelCase
+- Pueden empezar por una letra, un subrayado o un símbolo de dolar
+- El contexto de una variable se delimita por las llaves
+### Ámbito y contexto de variables (Scope / Context)
+  - Las variables están delimitadas por los { ... } que es su contexto
+
